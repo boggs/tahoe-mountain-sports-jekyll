@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<div class="c-category">
+  <div class="c-category-header">
+    <div class="o-container">
+      <h1 class="c-page-heading">{{ page.title }}</h1>
+      <div class="c-sort js-sort"><a class="c-sort__item is-selected" href="#all">All</a> <a class="c-sort__item" href="#experience">Experiences</a> <a class="c-sort__item" href="#story">Stories</a></div>
+      {% if page.image.credit.name %}
+        <p>
+          {% if page.image.credit.url %}
+            <a href="{{ page.image.credit.url }}" target="_blank">
+          {% endif %}
+          {{ page.image.credit.name }}
+          {% if page.image.credit.url %}
+            </a>
+          {% endif %}
+        </p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="c-category-main">
+    <div class="o-container">
+      <div class="o-layout c-collection js-sort-articles"><!--
+        {% assign collection_counter = 0 %}
+
+        {% for article in site.data.articles %}
+          {% if collection_counter == 1 %}
+            {% assign collection_counter = collection_counter | plus: 1 %}
+         --><div class="o-layout__item c-collection__item c-collection__item--ad">
+              <div class="c-collection__ad">
+                {% include objects/objects-ad.html id="dfp-medium-rectangle" %}
+              </div>
+            </div><!--
+          {% endif %}
+
+          {% if article.category == page.title %}
+            {% if collection_counter == 0 %}
+              {% assign size = article.images.featured.src.large %}
+            {% else %}
+              {% assign size = article.images.featured.src.small %}
+            {% endif %}
+
+            {% assign collection_counter = collection_counter | plus: 1 %}
+         --><div class="o-layout__item c-collection__item c-collection__item--{{ article.type | downcase }}">
+              <a class="o-block o-block--inset c-collection-card" href="{{ article.permalink | prepend: site.baseurl }}">
+                <div class="o-block__img c-collection-card__img-wrap u-bg-cover-img" style="background-image: url({{ size }})"></div>
+                <div class="o-block__body c-collection-card__body">
+                  {{ article.title }}
+                </div>
+              </a>
+            </div><!--
+          {% endif %}
+        {% endfor %}
+   --></div>
+    </div>
+  </div>
+</div>

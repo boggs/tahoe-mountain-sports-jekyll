@@ -1,0 +1,15 @@
+{% assign ad_id = include.id %}
+{% for ad in site.data.ads %}
+  {% if ad.id == ad_id %}
+    {% assign current_ad = ad %}
+  {% endif %}
+{% endfor %}
+
+<div class="o-ad">
+  <!-- /{{ site.dfp.account }}/{{ current_ad.name }} -->
+  <div id="{{ current_ad.id }}" style="width: {{ current_ad.width }}px; height: {{ current_ad.height }}px;">
+    <script type='text/javascript'>
+    	googletag.cmd.push(function() { googletag.display('{{ current_ad.id }}'); });
+    </script>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+---
+layout: default
+---
+{% for category in site.data.categories %}
+  {% if category.title == page.category %}
+    {% assign category_permalink = category.permalink %}
+  {% endif %}
+{% endfor %}
+
+{% include components/components-site-subnav.html %}
+
+<div class="c-article">
+  <div class="o-billboard c-article__header">
+    <div class="o-container">
+      <a class="c-article-category" href="{{ category_permalink | prepend: site.baseurl }}">{{ page.category }}</a>
+      <h1 class="c-article-heading">{{ page.title }}</h1>
+    </div>
+  </div>
+  <div class="c-article__main">
+    <div class="o-container">
+      <div class="c-article__main-inner">
+        <div class="o-layout c-article-layout">
+          <div class="o-layout__item c-article-layout__main">
+            <div class="c-gallery js-gallery">
+              {% assign featured_image = page.images.featured %}
+              <!--{% include components/components-gallery-item.html image=featured_image size="large" %}-->
+
+              {% if page.images.gallery %}
+                <div class="c-gallery__thumbnails"><!--
+                  {% for gallery_image in page.images.gallery %}
+                    {% include components/components-gallery-item.html image=gallery_image size="small" %}
+                  {% endfor %}
+                --></div>
+              {% endif %}
+            </div>
+
+            {% if page.tips %}
+              {% include components/components-tips.html %}
+            {% endif %}
+
+            <div class="c-article__body s-article">
+              {{ page.body }}
+            </div>
+          </div><!--
+       --><div class="o-layout__item c-article-layout__aside">
+            {% include objects/objects-ad.html id="dfp-half-page" %}
+            {% include components/components-related.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

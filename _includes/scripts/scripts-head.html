@@ -1,0 +1,30 @@
+{% if page.layout == 'homepage' %}
+  {% assign layout = 'Homepage' %}
+  {% assign activity = 'Homepage' %}
+{% else %}
+  {% if page.category %}
+    {% assign layout = 'Article' %}
+    {% assign activity = page.category %}
+  {% else %}
+    {% assign layout = 'Category' %}
+    {% assign activity = page.title %}
+  {% endif %}
+{% endif %}
+
+<script>
+  var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; (function() { var gads = document.createElement('script');     gads.async = true; gads.type = 'text/javascript'; var useSSL = 'https:' == document.location.protocol; gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; var node = document.getElementsByTagName('script')[0]; node.parentNode.insertBefore(gads, node);})();
+
+  googletag.cmd.push(function() {
+  	var mapping_leaderboard = googletag.sizeMapping().
+      addSize([0, 0], []).
+      addSize([750, 200], [728, 90]). // Tablet
+      addSize([1050, 200], [728, 90]). // Desktop
+      build();
+
+  	{% for ad in site.data.ads %}
+  	  googletag.defineSlot('/{{ site.dfp.account }}/{{ ad.name }}', [{{ ad.size.width }}, {{ ad.size.height }}], '{{ ad.id }}').setTargeting('Campaign',"{{ site.dfp.campaign }}").setTargeting("CityState","LakeTahoeCA").setTargeting("Activity","{{ activity | replace: '/','' | replace: ' ','' }}").setTargeting("Layout","{{ layout }}").addService(googletag.pubads()).setCollapseEmptyDiv(true);
+  	{% endfor %}
+
+    googletag.enableServices();
+  });
+</script>

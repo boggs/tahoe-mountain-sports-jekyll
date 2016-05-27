@@ -1,0 +1,8 @@
+{% assign descriptor = include.descriptor %}
+
+<dl>
+  <dt>{{ descriptor.field }}</dt>
+  {% for value in descriptor.value %}
+    <dd class="inline">{{ value | capitalize | replace: '_',' ' }}{% unless forloop.last %},{% endunless %}</dd>
+  {% endfor %}
+</dl>

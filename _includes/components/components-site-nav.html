@@ -1,0 +1,17 @@
+<div class="c-site-nav">
+  {% for category in site.data.categories %}
+    {% for article in site.data.articles %}
+      {% if article.category == category.title %}
+        <div class="c-site-nav__item">
+          <a class="o-block o-block--inset c-card" href="{{ category.permalink | prepend: site.baseurl }}">
+            <div class="o-block__img c-card__img u-bg-cover-img" style="background-image: url({{ article.images.featured.src.small }})"></div>
+            <div class="o-block__body c-card__body">
+              {{ category.title }}
+            </div>
+          </a>
+        </div>
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</div>

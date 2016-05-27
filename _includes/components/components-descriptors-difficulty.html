@@ -1,0 +1,9 @@
+{% assign descriptor = include.descriptor %}
+
+<dl>
+  <dt>{{ descriptor.field }}</dt>
+  <dd>{{ descriptor.value }} stars</dd>
+  {% if descriptor.qualifier %}
+    <dd class="small">{{ descriptor.qualifier }}</dd>
+  {% endif %}
+</dl>

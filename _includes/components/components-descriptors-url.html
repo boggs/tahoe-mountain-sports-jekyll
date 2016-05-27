@@ -1,0 +1,10 @@
+{% assign descriptor = include.descriptor %}
+
+<dl>
+  <dt>{{ descriptor.field }}</dt>
+  {% if descriptor.qualifier == '' %}
+    <dd><a href="{{ descriptor.value }}">{{ descriptor.value }}</a></dd>
+  {% else %}
+    <dd><a href="{{ descriptor.value }}">{{ descriptor.qualifier }}</a></dd>
+  {% endif %}
+</dl>

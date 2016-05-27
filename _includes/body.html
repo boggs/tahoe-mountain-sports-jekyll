@@ -1,0 +1,17 @@
+{% assign base = page.permalink | split: '/' | size | minus: 1 %}
+<body class="{% unless base == 2 %}is-supersized{% endunless %}">
+  <div class="o-site js-site">
+    <div class="o-site__stage">
+      <div class="o-site__nav">
+        {% include components/components-site-nav.html %}
+      </div>
+      <div class="o-site__main">
+        <div class="o-site__main-inner">
+          {% include components/components-site-header.html %}
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include scripts/scripts-footer.html %}
+</body>

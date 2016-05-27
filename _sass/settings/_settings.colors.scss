@@ -1,0 +1,43 @@
+/**
+ * Settings
+ * COLORS
+ */
+
+// Grey
+$color-text:    #2c2424;
+$color-text-80: mix($color-text, white, 80%);
+$color-text-60: mix($color-text, white, 60%);
+$color-text-40: mix($color-text, white, 40%);
+$color-text-20: mix($color-text, white, 20%);
+$color-text-10: mix($color-text, white, 10%);
+$color-text-05: mix($color-text, white, 5%);
+
+$color-loud:  mix($color-text, black, 65%);
+$color-quiet: mix($color-text, white, 65%);
+
+$base-text-color: $color-text; // Re-assign base text color
+
+// Blue
+$color-primary:    #4090db;
+$color-brand-blue: $color-primary;
+
+// Green
+$color-success:     #4dc3b2;
+$color-brand:       $color-success;
+$color-brand-green: $color-success;
+
+// Yellow
+$color-warning:      #ffb554;
+$color-brand-yellow: $color-warning;
+
+// Red
+$color-danger:    #e86a57;
+$color-brand-red: $color-danger;
+
+// Light blue
+$color-info:            #90c8e7;
+$color-brand-lightBlue: $color-info;
+
+// Brown
+$color-info-alt:    #64513e;
+$color-brand-brown: $color-info-alt;

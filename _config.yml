@@ -1,0 +1,22 @@
+title: "Where To Go Outdoors Near Lake Tahoe, CA"
+city: "Lake Tahoe"
+state: "CA"
+description: |
+
+baseurl: "/tahoe-mountain-sports"
+url:
+
+page_gen:
+  - data: "articles"
+    template: "article"
+    name: "permalink"
+    dir: ""
+  - data: "categories"
+    template: "category"
+    name: "permalink"
+    dir: ""
+page_gen-dirs: true
+
+dfp:
+  account: "137716506"
+  campaign: "2016_SalomonKiosks"

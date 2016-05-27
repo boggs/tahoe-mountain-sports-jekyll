@@ -1,0 +1,193 @@
+/**
+ * Tools
+ * FONTS
+ */
+
+/**
+ * Base font styles
+ */
+@mixin font-style-400 {
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-style-400-italic {
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin font-style-600 {
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin font-style-600-italic {
+  font-weight: 600;
+  font-style: italic;
+}
+
+@mixin font-style-700 {
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin font-style-700-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+
+/**
+ * SERIF
+ */
+
+// Chronicle ScreenSmart Book
+@mixin small-serif {
+  font-family: "#{$brand-font-serif} SSm A", "#{$brand-font-serif} SSm B", $base-font-stack-serif;
+  @include font-style-400;
+}
+
+// Chronicle ScreenSmart Book Italic
+@mixin small-serif-italic {
+  font-family: "#{$brand-font-serif} SSm A", "#{$brand-font-serif} SSm B", $base-font-stack-serif;
+  @include font-style-400-italic;
+}
+
+// Chronicle ScreenSmart Bold
+@mixin small-serif-bold {
+  font-family: "#{$brand-font-serif} SSm A", "#{$brand-font-serif} SSm B", $base-font-stack-serif;
+  @include font-style-600;
+}
+
+// Chronicle ScreenSmart Bold Italic
+@mixin small-serif-bold-italic {
+  font-family: "#{$brand-font-serif} SSm A", "#{$brand-font-serif} SSm B", $base-font-stack-serif;
+  @include font-style-600-italic;
+}
+
+// Chronicle G2 Roman
+@mixin serif {
+  font-family: "#{$brand-font-serif} Text G2 A", "#{$brand-font-serif} Text G2 B", $base-font-stack-serif;
+  @include font-style-400;
+}
+
+// Chronicle G2 Italic
+@mixin serif-italic {
+  font-family: "#{$brand-font-serif} Text G2 A", "#{$brand-font-serif} Text G2 B", $base-font-stack-serif;
+  @include font-style-400-italic;
+}
+
+// Chronicle G2 Bold
+@mixin serif-bold {
+  font-family: "#{$brand-font-serif} Text G2 A", "#{$brand-font-serif} Text G2 B", $base-font-stack-serif;
+  @include font-style-700;
+}
+
+// Chronicle G2 Bold Italic
+@mixin serif-bold-italic {
+  font-family: "#{$brand-font-serif} Text G2 A", "#{$brand-font-serif} Text G2 B", $base-font-stack-serif;
+  @include font-style-700-italic;
+}
+
+/**
+ * SANS SERIF
+ */
+
+// Forza ScreenSmart Book
+@mixin small-sans-serif {
+  font-family: "#{$brand-font-sans-serif} SSm A", "#{$brand-font-sans-serif} SSm B", $base-font-stack-sans-serif;
+  @include font-style-400;
+}
+
+// Forza ScreenSmart Book Italic
+@mixin small-sans-serif-italic {
+  font-family: "#{$brand-font-sans-serif} SSm A", "#{$brand-font-sans-serif} SSm B", $base-font-stack-sans-serif;
+  @include font-style-400-italic;
+}
+
+// Forza ScreenSmart Bold
+@mixin small-sans-serif-bold {
+  font-family: "#{$brand-font-sans-serif} SSm A", "#{$brand-font-sans-serif} SSm B", $base-font-stack-sans-serif;
+  @include font-style-700;
+}
+
+// Forza ScreenSmart Bold Italic
+@mixin small-sans-serif-bold-italic {
+  font-family: "#{$brand-font-sans-serif} SSm A", "#{$brand-font-sans-serif} SSm B", $base-font-stack-sans-serif;
+  @include font-style-700-italic;
+}
+
+// Forza Book
+@mixin sans-serif {
+  font-family: "#{$brand-font-sans-serif} A", "#{$brand-font-sans-serif} B", $base-font-stack-sans-serif;
+  @include font-style-400;
+}
+
+// Forza Book Italic
+@mixin sans-serif-italic {
+  font-family: "#{$brand-font-sans-serif} A", "#{$brand-font-sans-serif} B", $base-font-stack-sans-serif;
+  @include font-style-400-italic;
+}
+
+// Forza Bold
+@mixin sans-serif-bold {
+  font-family: "#{$brand-font-sans-serif} A", "#{$brand-font-sans-serif} B", $base-font-stack-sans-serif;
+  @include font-style-700;
+}
+
+// Forza Bold Italic
+@mixin sans-serif-bold-italic {
+  font-family: "#{$brand-font-sans-serif} A", "#{$brand-font-sans-serif} B", $base-font-stack-sans-serif;
+  @include font-style-700-italic;
+}
+
+/**
+ * SLAB SERIF
+ */
+
+// Vitesse ScreenSmart Book
+@mixin small-slab-serif {
+  font-family: "#{$brand-font-slab-serif} SSm A", "#{$brand-font-slab-serif} SSm B", $base-font-stack-slab-serif;
+  @include font-style-400;
+}
+
+// Vitesse ScreenSmart Book Italic
+@mixin small-slab-serif-italic {
+  font-family: "#{$brand-font-slab-serif} SSm A", "#{$brand-font-slab-serif} SSm B", $base-font-stack-slab-serif;
+  @include font-style-400-italic;
+}
+
+// Vitesse ScreenSmart Bold
+@mixin small-slab-serif-bold {
+  font-family: "#{$brand-font-slab-serif} SSm A", "#{$brand-font-slab-serif} SSm B", $base-font-stack-slab-serif;
+  @include font-style-700;
+}
+
+// Vitesse ScreenSmart Bold Italic
+@mixin small-slab-serif-bold-italic {
+  font-family: "#{$brand-font-slab-serif} SSm A", "#{$brand-font-slab-serif} SSm B", $base-font-stack-slab-serif;
+  @include font-style-700-italic;
+}
+
+// Vitesse Book
+@mixin slab-serif {
+  font-family: "#{$brand-font-slab-serif} A", "#{$brand-font-slab-serif} B", $base-font-stack-slab-serif;
+  @include font-style-400;
+}
+
+// Vitesse Book Italic
+@mixin slab-serif-italic {
+  font-family: "#{$brand-font-slab-serif} A", "#{$brand-font-slab-serif} B", $base-font-stack-slab-serif;
+  @include font-style-400-italic;
+}
+
+// Vitesse Bold
+@mixin slab-serif-bold {
+  font-family: "#{$brand-font-slab-serif} A", "#{$brand-font-slab-serif} B", $base-font-stack-slab-serif;
+  @include font-style-700;
+}
+
+// Vitesse Bold Italic
+@mixin slab-serif-bold-italic {
+  font-family: "#{$brand-font-slab-serif} A", "#{$brand-font-slab-serif} B", $base-font-stack-slab-serif;
+  @include font-style-700-italic;
+}

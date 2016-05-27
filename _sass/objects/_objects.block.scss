@@ -1,0 +1,31 @@
+/**
+ * Objects
+ * BLOCK
+ */
+
+.o-block {
+  display: block;
+}
+
+.o-block__img {
+  vertical-align: middle;
+}
+
+.o-block__body {
+  display: block;
+}
+
+.o-block--inset {
+  position: relative;
+}
+
+.o-block--inset .o-block__img {
+  z-index: 0;
+}
+
+.o-block--inset .o-block__body {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

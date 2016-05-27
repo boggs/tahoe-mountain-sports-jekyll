@@ -1,0 +1,26 @@
+<div class="c-tips">
+  {% for tip in page.tips %}
+    {% if tip.value %}
+      {% case tip.field %}
+        {% when 'Difficulty' %}
+          {% include components/components-descriptors-difficulty.html descriptor=tip %}
+        {% when 'Time To Complete' %}
+          {% include components/components-descriptors-number.html descriptor=tip %}
+        {% when 'Distance' %}
+          {% include components/components-descriptors-number.html descriptor=tip %}
+        {% when 'Seasonality' %}
+          {% include components/components-descriptors-enum.html descriptor=tip %}
+        {% when 'Land Website' %}
+          {% include components/components-descriptors-url.html descriptor=tip %}
+        {% when 'Topo Map' %}
+          {% include components/components-descriptors-url.html descriptor=tip %}
+        {% when 'Fees Permit' %}
+          {% include components/components-descriptors-boolean.html descriptor=tip %}
+        {% when 'Dog Friendly' %}
+          {% include components/components-descriptors-enum.html descriptor=tip %}
+        {% when 'Destination Highlights' %}
+          {% include components/components-descriptors-enum.html descriptor=tip %}
+      {% endcase %}
+    {% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,16 @@
+/**
+ * Components
+ * SITE-NAV
+ */
+
+.c-site-nav {
+  background-color: $color-text;
+}
+
+.c-site-nav__item {
+  margin-bottom: rem(2);
+}
+
+.c-site-nav__item a {
+  color: white;
+}

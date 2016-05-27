@@ -1,0 +1,18 @@
+/**
+ * Tools
+ * ALIASES
+ */
+
+
+/**
+ * Reassign spacing unit and convert to rem
+ */
+$spacing-unit: rem($inuit-base-spacing-unit);
+
+
+/**
+ * Reassign inuit-font-size
+ */
+@mixin font-size($args...) {
+  @include inuit-font-size($args...)
+}

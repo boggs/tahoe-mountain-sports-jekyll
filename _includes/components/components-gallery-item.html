@@ -1,0 +1,22 @@
+{% assign image = include.image %}
+{% assign size = include.size %}
+
+--><div class="c-gallery__item c-gallery__item--{{ size }}">
+  <a class="c-gallery__link" href="{{ image.src.large }}">
+    {% if size == "large" %}
+      <img src="{{ image.src.large }}" alt="{{ image.alt }}">
+    {% else %}
+      <img src="{{ image.src.small }}" alt="{{ image.alt }}">
+    {% endif %}
+  </a>
+  <div class="c-gallery__figcaption">{% if image.caption %}{{ image.caption }}{% endif %}</div>
+  <div class="c-gallery__credit">
+    {% if image.credit.name %}
+      {% if image.credit.url %}
+        <a href="{{ image.credit.url }}" target="_blank" data-copyright-holder-url="{{ image.credit.url }}">{{ image.credit.name }}</a>
+      {% else %}
+        {{ image.credit.name }}
+      {% endif %}
+    {% endif %}
+  </div>
+</div><!--

@@ -1,0 +1,30 @@
+- id: "dfp-sponsor0"
+  name: "Microsite_PresentedBy0_60x60"
+  size:
+    width: "60"
+    height: "60"
+- id: "dfp-sponsor1"
+  name: "Microsite_PresentedBy1_60x60"
+  size:
+    width: "60"
+    height: "60"
+- id: "dfp-sponsor2"
+  name: "Microsite_PresentedBy2_60x60"
+  size:
+    width: "60"
+    height: "60"
+- id: "dfp-sponsor3"
+  name: "Microsite_PresentedBy3_60x60"
+  size:
+    width: "60"
+    height: "60"
+- id: "dfp-half-page"
+  name: "Microsite_HalfPage_300x600"
+  size:
+    width: "300"
+    height: "600"
+- id: "dfp-medium-rectangle"
+  name: "Microsite_Medium_300x250"
+  size:
+    width: "300"
+    height: "250"

@@ -1,0 +1,37 @@
+/**
+ * Components
+ * SITE-SUBNAV
+ */
+
+.c-site-subnav {
+  display: none;
+  @include small-sans-serif-bold;
+  @include font-size(12px);
+  height: rem(44);
+  padding: rem(10) $spacing-unit;
+  background-color: $color-text-20;
+}
+
+.c-site-subnav a {
+  color: $color-text;
+  text-decoration: underline;
+}
+
+.c-site-subnav__breadcrumb {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c-site-subnav__breadcrumb li:after {
+  padding: 0 quarter($spacing-unit);
+  color: rgba($color-text, .35);
+  content: "/";
+}
+
+.c-site-subnav__breadcrumb li:last-child:after {
+  display: none;
+}
+
+.c-site-subnav__top {
+  float: right;
+}

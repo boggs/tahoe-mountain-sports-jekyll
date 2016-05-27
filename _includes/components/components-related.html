@@ -1,0 +1,17 @@
+<div class="c-related">
+  <h3>More {{ page.category }}</h3>
+  {% for article in site.data.articles %}
+    {% if forloop.index0 == 5 %}
+      {% break %}
+    {% endif %}
+    {% if article.category == page.category %}
+      <a class="c-related__item" href="{{ article.permalink | prepend: site.baseurl }}">
+        <div class="o-media">
+          <img class="o-media__img c-related-img" src="{{ article.images.featured.src.small }}">
+          <div class="o-media__body">{{ article.title }}</div>
+        </div>
+      </a>
+    {% endif %}
+  {% endfor %}
+  <a class="c-article-category" href="{{ category_permalink | prepend: site.baseurl }}">See all</a>
+</div>

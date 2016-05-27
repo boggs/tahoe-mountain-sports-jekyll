@@ -1,0 +1,11 @@
+<div class="c-site-header">
+  <div class="c-presented-by">
+    <span>Presented by</span>
+    <ul class="o-list-inline c-presented-by__list">
+      <li>{% include objects/objects-ad.html id="dfp-sponsor0" %}</li>
+      <li>{% include objects/objects-ad.html id="dfp-sponsor1" %}</li>
+    </ul>
+  </div>
+  <a class="c-site-toggle js-site-toggle" href="#"><img src="{{ 'toggle.png' | prepend: '/img/' | prepend: site.baseurl }}" width="24" height="16"></a>
+  <a class="c-site-headline" href="{{ '/' | prepend: site.baseurl }}">Where to Go Outdoors Near {{ site.city }}</a>
+</div>
